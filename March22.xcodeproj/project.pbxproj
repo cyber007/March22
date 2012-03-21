@@ -20,11 +20,11 @@
 		84414B911517959D00E959AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84414B931517959D00E959AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84414B951517959D00E959AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		84414B991517959D00E959AB /* March22-Info.plist */ = {isa = PBXFileReference; path = "March22-Info.plist"; sourceTree = "<group>"; };
+		84414B991517959D00E959AB /* March22-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "March22-Info.plist"; sourceTree = "<group>"; };
 		84414B9B1517959D00E959AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84414B9D1517959D00E959AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		84414B9F1517959D00E959AB /* March22-Prefix.pch */ = {isa = PBXFileReference; path = "March22-Prefix.pch"; sourceTree = "<group>"; };
-		84414BA01517959D00E959AB /* March22AppDelegate.h */ = {isa = PBXFileReference; path = March22AppDelegate.h; sourceTree = "<group>"; };
+		84414B9F1517959D00E959AB /* March22-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "March22-Prefix.pch"; sourceTree = "<group>"; };
+		84414BA01517959D00E959AB /* March22AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = March22AppDelegate.h; sourceTree = "<group>"; };
 		84414BA11517959D00E959AB /* March22AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = March22AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +219,7 @@
 		84414BA61517959D00E959AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "March22/March22-Prefix.pch";
 				INFOPLIST_FILE = "March22/March22-Info.plist";
@@ -230,10 +231,13 @@
 		84414BA71517959D00E959AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "March22/March22-Prefix.pch";
 				INFOPLIST_FILE = "March22/March22-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
